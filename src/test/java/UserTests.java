@@ -5,7 +5,7 @@ import Pages.LoginPage;
 
 import org.testng.annotations.Test;
 
-public class UserTests extends BaseLibrary {
+public class UserTests extends BaseTest {
 
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();

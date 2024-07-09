@@ -5,7 +5,7 @@ import Base.BaseTest;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-public class LoginPage extends BaseTest {
+public class LoginPage extends BaseLibrary {
     public LoginPage emailDoldur(String email)
     {
         driver.findElement(By.name("login email")).sendKeys(email);

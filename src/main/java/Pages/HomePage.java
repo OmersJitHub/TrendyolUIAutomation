@@ -5,7 +5,7 @@ import Base.BaseTest;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 
-public class HomePage extends BaseTest {
+public class HomePage extends BaseLibrary {
     public HomePage hesabimKontrol()
     {
         String value4 = driver.findElement(By.cssSelector("[class='link account-user'] p")).getText();
