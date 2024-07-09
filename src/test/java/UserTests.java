@@ -3,6 +3,7 @@ import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
 
+import Pages.MainPage;
 import org.testng.annotations.Test;
 
 public class UserTests extends BaseTest {
@@ -21,7 +22,7 @@ public class UserTests extends BaseTest {
         homePage.hesabimKontrol();
     }
 
-    @Test
+    @Test(description = "Hatalı Login Kullanıcı Giriş Kontrol")
     public void notValidLogin() throws InterruptedException {
         loginPage
                 .emailDoldur(email)
@@ -32,7 +33,7 @@ public class UserTests extends BaseTest {
         loginPage.hataMesajiKontrolu(errorMessage);
     }
 
-    @Test
+    @Test(description = "Sistemde Kayıtlı Olmayan Email Kullanıcı Girişi")
     public void notValidWithEmail() throws InterruptedException {
         loginPage.emailDoldur("aaaaaaaaaaa@mail.com")
                 .passwordDoldur(password)
@@ -41,7 +42,7 @@ public class UserTests extends BaseTest {
         loginPage.hataMesajiKontrolu(errorMessage);
     }
 
-    @Test
+    @Test(description = "Bos Karakter Kontrolu")
     public void requiredBlankControl() throws InterruptedException {
         loginPage.emailDoldur("")
                 .passwordDoldur("")
@@ -59,7 +60,7 @@ public class UserTests extends BaseTest {
         homePage.hesabimKontrol();
     }
 
-    @Test
+    @Test(description = "Minumum Karakter Kontrolü")
     public void minControl() throws InterruptedException {
         loginPage.emailDoldur("1")
                 .passwordDoldur("2")
@@ -74,7 +75,7 @@ public class UserTests extends BaseTest {
         loginPage.hataMesajiKontrolu(errorMessage);
     }
 
-    @Test
+    @Test(description = "Maximum Karakter Kontrolü")
     public void maxControl() throws InterruptedException {
         loginPage.emailDoldur("111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111")
                 .passwordDoldur(password);
