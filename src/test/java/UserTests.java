@@ -1,6 +1,8 @@
 import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.annotations.Test;
 
 public class UserTests extends BaseTest {
@@ -9,6 +11,7 @@ public class UserTests extends BaseTest {
     HomePage homePage = new HomePage();
 
     @Test(description = "Başarılı Login Kullanıcı Giriş Kontrol")
+    @Severity(SeverityLevel.CRITICAL)
     public void loginSuccesful() throws InterruptedException {
         loginPage
                 .emailDoldur(email)
