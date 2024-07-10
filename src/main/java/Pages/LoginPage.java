@@ -16,6 +16,7 @@ public class LoginPage extends BaseLibrary {
     @Step("Parola Alanı Doldurulur")
     public LoginPage passwordDoldur(String password) {
         driver.findElement(By.name("login-password")).sendKeys(password);
+        screenshot();
         return this;
     }
 
@@ -28,6 +29,7 @@ public class LoginPage extends BaseLibrary {
     @Step("Hata Mesajı Kontrolü: {text}")
     public LoginPage hataMesajiKontrolu(String text) {
         String value = driver.findElement(By.cssSelector("[class='message']")).getText();
+        screenshot();
         Assert.assertEquals(text, value);
         return this;
     }
