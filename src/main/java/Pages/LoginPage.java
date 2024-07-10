@@ -40,6 +40,4 @@ public class LoginPage extends BaseLibrary {
         driver.findElement(By.name("login-password")).clear();
         return this;
     }
-
-
 }

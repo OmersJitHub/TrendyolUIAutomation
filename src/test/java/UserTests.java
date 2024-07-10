@@ -1,9 +1,6 @@
-import Base.BaseLibrary;
 import Base.BaseTest;
 import Pages.HomePage;
 import Pages.LoginPage;
-
-import Pages.MainPage;
 import org.testng.annotations.Test;
 
 public class UserTests extends BaseTest {
@@ -91,5 +88,4 @@ public class UserTests extends BaseTest {
         sleep(3000);
         homePage.hesabimKontrol();
     }
-
 }

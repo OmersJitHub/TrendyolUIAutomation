@@ -1,8 +1,5 @@
 package Base;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
-
-
 import Pages.MainPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
